@@ -42,12 +42,15 @@ class HTTP:
     def saveparams(self, param, key):
         # 类似于 token = jsonresult['token']
         self.params[param] = self.jsonresult[key]
-        print(self.params['tk'])
+        print('-----------------------------------获取关联参数列表-----------------------------------')
+        print(self.params)
+
     # 获取参数
     def __getprams(self, getparam):
         for key in self.params:
             getparam = getparam.replace('{' + key + '}', self.params[key])
         return getparam
+
     # 将传入的参数转换为字典
     # 转换前  data='username=demo003&password=demo003'
     # 转换后 data={'username':'demo003,'password':'demo003'}
