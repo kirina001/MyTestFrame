@@ -14,6 +14,12 @@ class HTTP:
 
     # 定义post方法
     def post(self, path, data=None):
+        '''
+        定义post方法
+        :param path: url路径
+        :param data: 键值对传递字符串参数
+        :return: 无返回值
+        '''
         if data is None:
             result = self.session.post(path)
         else:
@@ -26,6 +32,12 @@ class HTTP:
 
     # 断言预期结果与实际结果是否相等
     def assertequls(self, key, value):
+        '''
+        断言预期结果与实际结果是否相等
+        :param key: 预期结果
+        :param value: 实际结果
+        :return: 判定结果pass or faild
+        '''
         print(self.jsonresult)
         # 判定指定关键字的值是否相等
         if str(self.jsonresult[key]) == str(value):

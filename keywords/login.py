@@ -60,7 +60,7 @@ http.assertequls(status, '201')
 
 print('-----------------------------------token已授权，进行登录-----------------------------------')
 # 登录用户查询用户信息
-data = 'username=demo005&password=demo005'
+data = 'username=demo007&password=demo007'
 http.post(urllogin, data)
 http.assertequls(status, '200')
 http.saveparams('id', 'userid')
